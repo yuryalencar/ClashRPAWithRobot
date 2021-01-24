@@ -1,0 +1,1 @@
+This file contains all components of system, can be splited in more archives of components.

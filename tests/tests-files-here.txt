@@ -1,0 +1,2 @@
+This file represents all scenarios of use the application.
+Can be various flow files, for presents all uses, using the page files and Page Object Pattern.

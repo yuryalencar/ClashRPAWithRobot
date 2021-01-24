@@ -1,0 +1,1 @@
+This file contains hooks how open and close browser, after and before any execution test cases.
