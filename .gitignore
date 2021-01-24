@@ -1,0 +1,6 @@
+# projects files
+logs
+config.robot
+
+# python files
+__pycache__
