@@ -16,3 +16,6 @@ ${USER_NEW_KEY_BUTTON}                  css=a[href*=new-key]
 ${USER_KEY_NAME_INPUT}                  id=name
 ${USER_DESCRIPTION_TEXTAREA}            id=description
 ${USER_FIRST_IP}                        id=range-0
+
+${USER_TITLE_API_KEY}                   css=h4[class=api-key__name]
+${USER_FIRST_API_KEY}                   css=samp

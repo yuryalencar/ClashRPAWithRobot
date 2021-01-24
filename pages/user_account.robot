@@ -1,5 +1,6 @@
 *** Settings ***
 Library     ../libs/get_my_ip.py
+Library     ../libs/csv_manipulations.py
 
 Resource    ./partial_page/user_navbar.robot
 
@@ -13,4 +14,10 @@ Generate an New Key
     ${machine_ip}    Get This External Machine Ip
     Type Text       ${USER_FIRST_IP}        ${machine_ip}       clear=True
 
-    click       ${BUTTON_SUBMIT}
+    Click       ${BUTTON_SUBMIT}
+
+Create CSV With "${clan_name}" of the Brazil Clan informations
+    Click       ${USER_TITLE_API_KEY}
+    ${token}    Get Text                    ${USER_FIRST_API_KEY}
+
+    Make Clan Informations Csv    ${token}    ${BASE_API_URL}    ${clan_name}    ${BRAZIL_LOCATION_ID}      ${TAG_CLA_START}
