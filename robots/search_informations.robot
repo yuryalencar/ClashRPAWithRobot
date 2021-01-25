@@ -5,7 +5,7 @@ Test Setup      Start Clash Robot
 Test Teardown   End Clash Robot
 
 *** Test Cases ***
-Create an New Key
+Create an New Key and Make an Members CSV
     Make Login Using Default User
     Go To My Account
     Generate an New Key
