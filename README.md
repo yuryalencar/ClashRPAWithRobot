@@ -42,6 +42,7 @@ pip3 install robotframework
 3. Install Playwright to Robot Framework
 ```
 pip3 install robotframework-browser
+rfbrowser init
 ```
 
 ### Languages used
