@@ -2,6 +2,7 @@
 # For more information access: https://marketsquare.github.io/robotframework-browser/Browser.html
 
 ${BROWSER}          chromium
+${HEADLESS}         true
 ${SCREEN_WIDTH}     1920
 ${SCREEN_HEIGHT}    1080
 

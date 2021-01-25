@@ -3,6 +3,8 @@ Resource    ../components/components.robot
 
 *** Keywords ***
 Make Login Using Default User
+    Log To Console              home_page: Making authentication
+
     Wait For Elements State     css=${HOME_NAVBAR_LOGIN_CSS_SELECTOR}   attached
     Execute Javascript          document.querySelector("${HOME_NAVBAR_LOGIN_CSS_SELECTOR}").click()
 

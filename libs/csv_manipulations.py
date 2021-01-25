@@ -1,8 +1,10 @@
 import csv
 from requests import get
-from logging import debug, error, info, warn
+from logging import debug, error, info 
 
 def make_clan_informations_csv(token, api_url, clan_name, locationId, tag_start):
+    info('Making Clan Informations in csv')
+
     headers = { 'Authorization': 'Bearer ' + token }
     payload = {'name': 'The resistance', 'locationId': 57000038}
     url = api_url + 'clans'
