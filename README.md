@@ -1,6 +1,6 @@
 <br />
 <p align="center">
-  <h3 align="center">TeasyStructure: Structure for Run tests generated in Teasy Language.</h3>
+  <h3 align="center">RPA: An Sample Using Robot Framework.</h3>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -21,13 +21,13 @@
 
 ## About Project
 
-This project aims provide a structure to run Teasy robot files generated.
+This project aims provide a sample robot to get and generate an csv with members of the Clash Royale Based in start tag information.
 
 ## Starting
 
 ### Installation
 
-This project not contains installation. **But** this project **require Robot Framework installed**. Install Robot using below steps.
+For run this project is required: Robot Framework and Playwright. For install use below steps.
 
 1. Install Python 3
 ```
@@ -39,28 +39,29 @@ https://www.python.org/downloads/
 pip3 install robotframework
 ```
 
-3. Install Selenium for Robot Framework
+3. Install Playwright to Robot Framework
 ```
-pip3 install --upgrade robotframework-seleniumlibrary
-```
-
-3. Install your browser driver (below chrome driver) and insert in system variable path
-```
-https://chromedriver.chromium.org/downloads
+pip install robotframework-browser
 ```
 
 ### Languages used
 
 - [Robot Framework (Python Version)](https://robotframework.org/)
-- [Teasy Language (Generate Robot Files)](https://github.com/yuryalencar/Teasy)
-- [Teasy FSM Generator (Tests files)]()
+- [Playwright (Robot Version)](https://robotframework-browser.org/)
 
 ### How To Use
 
-1. Copy all files for yours [respective directory](#files-by-directories).
-2. Run your tests
+1. Copy your `config.example.robot` to `config.robot`.
 ```
-robot -d ./logs tests
+cp config.example.robot config.robot
+```
+2. Configure your `config.robot` file setting your respective user.
+```
+OBS.: IN ${TAG_CLA_START} VARIABLE REPLACE '#' TO '%23'
+```
+3. Run your Robot
+```
+robot -d ./logs  --loglevel <INFO | DEBUG> robots
 ```
 
 ### Best Pratices
@@ -75,9 +76,9 @@ Below is a list of the files by directory.
 | ----------------------: | ----------------------------------------------------------------------------- |
 |                `config` | **config.robot** and **page_register.config.robot** for config and imports all robot pages.  |
 |            `components` | **components.robot** all components of the system.                            |
-|                 `tests` | All files of **.tests.robot** extension, contains all execution test cases.   |
-|                 `pages` | All files of **.pages.robot** extension, contains all pages of the system (Page Object Pattern).|
-|         `pages/commons` | **hooks.pages.commons.robot** for setup tests and tests teardown.             |
+|                `robots` | Contains all robots execution.   |
+|                 `pages` | Contains all pages of the system (Page Object Pattern and Page Factory).|
+|         `pages/commons` | **hooks.robot** for setup robot and robot teardown.             |
 
 ## Contributing
 
